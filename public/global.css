@@ -1,9 +1,10 @@
 :root {
 	--background-color: #2F3437;
 	--text-color: #F7FFF7;
-	--main-color: #640D14;
+	--color-one: #AE0514;
+	--color-two: #640D14;
 
-	--general-margin: 16%;
+	--general-margin: 10%;
 	--hero-font: 'Lobster', cursive;
 }
 
