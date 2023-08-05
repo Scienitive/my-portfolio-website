@@ -8,34 +8,36 @@
         <ul>
             <li><a href="/projects">Projects</a></li>
             <li><a href="/games">Games</a></li>
-            <li><a href="#">Contact</a></li>
+            <li class="contact"><a href="#">Contact</a></li>
         </ul>
     </nav>
 </header>
 
 <style>
+
     header {
-        display: flex;
-        height: 60px;
-        font-family: 'Roboto';
+        width: 100%;
+        font-family: 'Lato';
         font-size: 1.5rem;
         background-color: var(--bg-dark);
     }
 
     nav {
-        flex: 1;
+        height: 60px;
+        position: relative;
         display: flex;
         justify-content: space-between;
         align-items: center;
 
-        padding: 0 23%;
+        padding: 0 18vw;
     }
 
     ul {
         display: flex;
         justify-content: end;
-        gap: 30%;
+        gap: 6vw;
         list-style: none;
+        margin: 0;
     }
 
     a {
@@ -46,6 +48,32 @@
 
     a:hover {
         color: var(--color-2);
+    }
+
+    @media (max-width: 767px) {
+        .contact {
+            display: none;
+        }
+
+        nav {
+            padding: 0 10vw;
+        }
+    }
+
+    @media (max-width: 359px) {
+        .contact {
+            display: none;
+        }
+
+        nav {
+            height: 100px;
+            flex-direction: column;
+            padding: 16px 0;
+        }
+
+        ul {
+            padding: 0;
+        }
     }
 
 </style>

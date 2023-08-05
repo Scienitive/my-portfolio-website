@@ -15,22 +15,22 @@
 
 @font-face {
     font-family: 'Roboto';
-    src: url('/public/fonts/Roboto-Regular.ttf') format('truetype');
+    src: url('/fonts/Roboto-Regular.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'RobotoBold';
-    src: url('/public/fonts/Roboto-Bold.ttf') format('truetype');
+    src: url('/fonts/Roboto-Bold.ttf') format('truetype');
 }
 
 @font-face {
-    font-family: 'LaoMuangDon';
-    src: url('/public/fonts/LaoMuangDon-Regular.ttf') format('truetype');
+    font-family: 'Lato';
+    src: url('/fonts/Lato-Regular.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'Lobster';
-    src: url('/public/fonts/Lobster-Regular.ttf') format('truetype');
+    src: url('/fonts/Lobster-Regular.ttf') format('truetype');
 }
 
 html {

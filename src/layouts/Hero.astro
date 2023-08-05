@@ -1,11 +1,153 @@
 ---
+import GithubIcon from "../vectors/icons/GithubIcon.astro";
+import LinkedinIcon from "../vectors/icons/LinkedinIcon.astro";
+import ResumeIcon from "../vectors/icons/ResumeIcon.astro";
+import ItchIcon from "../vectors/icons/ItchIcon.astro";
+import YoutubeIcon from "../vectors/icons/YoutubeIcon.astro";
 
+import Shape from "../vectors/Shape.astro";
+import Terminal from "../vectors/Terminal.astro";
 ---
 
-<h1>Hello</h1>
+<div class="hero-container">
+    <div class="hero-left">
+        <div class="hero-text">
+            <p>Hi, my name is</p>
+            <p>Altuğ Alpcan Yaşar</p>
+            <p>A passionate developer</p>
+        </div>
+        <div class="hero-links">
+            <a href="#"><GithubIcon width="auto" height="30.82" color="var(--color-1)"/></a>
+            <a href="#"><LinkedinIcon width="29.25" height="29.53" color="var(--color-1)"/></a>
+            <a href="#"><ResumeIcon width="41.625" height="54" color="var(--color-1)"/></a>
+            <a href="#"><ItchIcon width="33.92" height="30.52" color="var(--color-1)"/></a>
+            <a href="#"><YoutubeIcon width="36.27" height="25.31" color="var(--color-1)"/></a>
+        </div>
+    </div>
+    <div class="hero-right">
+        <div class="shape-wrapper">
+            <Shape width="100%" height="auto" color="var(--color-2)"/>
+            <div class="terminal-wrapper">
+                <Terminal width="86%" height="auto"/>
+            </div>
+        </div>
+    </div>
+</div>
 
 <style>
-    h1 {
-        font-family: 'Roboto';
+
+    p,
+    h2 {
+        margin: 0;
     }
+    
+    .hero-container {
+        display: flex;
+        padding: 5rem 12vw;
+    }
+
+    .hero-left {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        font-size: 2rem;
+    }
+
+    .hero-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0.4rem;
+        font-family: 'Lobster';
+        color: var(--color-white);
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .hero-text p:nth-child(1) {
+        margin-left: 26px;
+        align-self: flex-start;
+    }
+
+    .hero-text p:nth-child(2) {
+        font-size: 3.375rem;
+        color: var(--color-1);
+    }
+
+    .hero-links {
+        display: flex;
+        align-items: end;
+        gap: 0.6rem;
+    }
+
+    .hero-links a {
+        margin-bottom: 1px;
+    }
+
+    .hero-links a:nth-child(3) {
+        margin-bottom: 0;
+    }
+
+    .hero-right {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .shape-wrapper {
+        position: relative;
+        width: 92%;
+        min-width: 380px;
+    }
+
+    .terminal-wrapper {
+        width: 100%;
+        position: absolute;
+        top: 20%;
+        left: 5%;
+    }
+
+    @media (max-width: 1199px) {
+        .hero-left {
+            font-size: 1.5rem;
+        }
+
+        .hero-text p:nth-child(2) {
+            font-size: 2.75rem;
+        }
+    }
+
+    @media (max-width: 999px) {
+        .hero-right {
+            display: none;
+        }
+
+        .hero-left {
+            font-size: 2rem;
+        }
+
+        .hero-text p:nth-child(1) {
+            margin-left: 0;
+            align-self: center;
+        }
+
+        .hero-text p:nth-child(2) {
+            font-size: 3.375rem;
+        }
+    }
+
+    @media (max-width: 549px) {
+        .hero-left {
+            font-size: 1.25rem;
+        }
+
+        .hero-text p:nth-child(2) {
+            font-size: 2.5rem;
+        }
+    }
+
 </style>
