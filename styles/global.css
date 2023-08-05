@@ -48,3 +48,8 @@ svg {
     max-width: 100%;
     display: block;
 }
+
+body {
+    background-color: var(--bg-color);
+    margin: 0;
+}
