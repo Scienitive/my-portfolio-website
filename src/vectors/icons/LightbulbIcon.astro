@@ -1,0 +1,36 @@
+---
+const {width, height, color} = Astro.props;
+---
+
+<svg xmlns="http://www.w3.org/2000/svg" width={width} height={height} viewBox="0 0 72 72" fill={color}>
+	<g filter="url(#filter0_di_229_2)">
+		<path fill-rule="evenodd" clip-rule="evenodd" d="M36 64C53.6731 64 68 49.6731 68 32C68 14.3269 53.6731 0 36 0C18.3269 0 4 14.3269 4 32C4 49.6731 18.3269 64 36 64ZM45.5031 35.1578C44.0611 37.1508 42.6117 39.1542 41.9091 41.5V41.4926H30.0909C29.3892 39.1324 27.9193 37.1063 26.4568 35.0949C26.0727 34.568 25.6886 34.041 25.3193 33.5066C23.8568 31.3988 23 28.8309 23 26.0625C23 18.8484 28.8205 13 36 13C43.1795 13 49 18.8484 49 26.0699C49 28.8383 48.1432 31.3988 46.6807 33.5141C46.3114 34.0484 45.9273 34.5754 45.5432 35.1023L45.5031 35.1578ZM41.9091 45.0625C41.9091 48.343 39.2648 51 36 51C32.7352 51 30.0909 48.343 30.0909 45.0625V43.875H41.9091V45.0625ZM28.9091 27.25C29.5591 27.25 30.0909 26.7156 30.0909 26.0625C30.0909 22.782 32.7352 20.125 36 20.125C36.65 20.125 37.1818 19.5906 37.1818 18.9375C37.1818 18.2844 36.65 17.75 36 17.75C31.4278 17.75 27.7273 21.4684 27.7273 26.0625C27.7273 26.7156 28.2591 27.25 28.9091 27.25Z"/>
+	</g>
+	<defs>
+		<filter id="filter0_di_229_2" x="0" y="0" width={width} height={height} filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+			<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+			<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+			<feOffset dy="4"/>
+			<feGaussianBlur stdDeviation="2"/>
+			<feComposite in2="hardAlpha" operator="out"/>
+			<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+			<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_229_2"/>
+			<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_229_2" result="shape"/>
+			<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+			<feOffset dy="4"/>
+			<feGaussianBlur stdDeviation="2"/>
+			<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+			<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+			<feBlend mode="normal" in2="shape" result="effect2_innerShadow_229_2"/>
+		</filter>
+	</defs>
+</svg>
+
+<style>
+
+    svg {
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.3));
+		margin-top: 5%;
+    }
+
+</style>

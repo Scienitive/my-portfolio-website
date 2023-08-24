@@ -1,0 +1,36 @@
+---
+const {width, height, color} = Astro.props;
+---
+
+<svg xmlns="http://www.w3.org/2000/svg" width={width} height={height} viewBox="0 0 72 72" fill={color}>
+	<g filter="url(#filter0_di_230_3)">
+		<path fill-rule="evenodd" clip-rule="evenodd" d="M36 64C53.6731 64 68 49.6731 68 32C68 14.3269 53.6731 0 36 0C18.3269 0 4 14.3269 4 32C4 49.6731 18.3269 64 36 64ZM31.25 13C29.9363 13 28.875 14.0613 28.875 15.375C27.5613 15.375 26.5 16.4363 26.5 17.75V34.375C26.5 35.6887 27.5613 36.75 28.875 36.75C28.875 38.0637 29.9363 39.125 31.25 39.125H33.625C34.9387 39.125 36 38.0637 36 36.75C37.3137 36.75 38.375 35.6887 38.375 34.375V17.75C38.375 16.4363 37.3137 15.375 36 15.375C36 14.0613 34.9387 13 33.625 13H31.25ZM40.75 46.25H19.375C18.0613 46.25 17 47.3113 17 48.625C17 49.9387 18.0613 51 19.375 51H40.75H52.625C53.9387 51 55 49.9387 55 48.625C55 47.3113 53.9387 46.25 52.625 46.25H51.3707C53.627 43.7266 55 40.4016 55 36.75C55 28.8828 48.6172 22.5 40.75 22.5V27.25C45.9973 27.25 50.25 31.5027 50.25 36.75C50.25 41.9973 45.9973 46.25 40.75 46.25ZM39.5625 41.5H25.3125C24.6594 41.5 24.125 42.0344 24.125 42.6875C24.125 43.3406 24.6594 43.875 25.3125 43.875H39.5625C40.2156 43.875 40.75 43.3406 40.75 42.6875C40.75 42.0344 40.2156 41.5 39.5625 41.5Z" fill="#C3073F"/>
+	</g>
+	<defs>
+		<filter id="filter0_di_230_3" x="0" y="0" width="72" height="72" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+			<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+			<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+			<feOffset dy="4"/>
+			<feGaussianBlur stdDeviation="2"/>
+			<feComposite in2="hardAlpha" operator="out"/>
+			<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+			<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_230_3"/>
+			<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_230_3" result="shape"/>
+			<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+			<feOffset dy="4"/>
+			<feGaussianBlur stdDeviation="2"/>
+			<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+			<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+			<feBlend mode="normal" in2="shape" result="effect2_innerShadow_230_3"/>
+		</filter>
+	</defs>
+</svg>
+
+<style>
+
+    svg {
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.3));
+		margin-top: 5%;
+    }
+
+</style>

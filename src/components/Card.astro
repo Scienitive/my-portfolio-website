@@ -1,0 +1,109 @@
+---
+import { getCollection } from 'astro:content'
+import GaugeIcon from '../vectors/icons/GaugeIcon.astro';
+import LightbulbIcon from '../vectors/icons/LightbulbIcon.astro';
+import MicroscopeIcon from '../vectors/icons/MicroscopeIcon.astro';
+
+const { number } = Astro.props;
+const numberInt = parseInt(number);
+
+const cards = await getCollection('card');
+const card = cards[numberInt - 1];
+
+let Icon;
+
+switch (numberInt) {
+    case 1:
+        Icon = GaugeIcon;
+        break;
+    case 2:
+        Icon = LightbulbIcon;
+        break;
+    case 3:
+        Icon = MicroscopeIcon;
+        break;
+    default:
+        throw Error("Card Error");
+}
+
+---
+
+<div class="card">
+	<div class="icon-wrapper">
+		<Icon width={"100%"} height={"100%"} color={"var(--color-1)"}/>
+	</div>
+    <h1>{card.data.title}</h1>
+    <div class="content-wrapper">
+        <p>{card.data.content}</p>
+    </div>
+</div>
+
+<style>
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        width: 22vw;
+        height: 22vw;
+        border-radius: 20px;
+        background-color: var(--bg-color);
+        padding: 10% 0 14% 0;
+        color: var(--color-white);
+    }
+
+    h1 {
+		margin: 0;
+        font-family: 'Roboto';
+        font-size: 1.182vw;
+    }
+
+    p {
+        font-family: 'IBM';
+        font-size: 0.92vw;
+        text-align: center;
+        margin: 0 10% 0 10%;
+    }
+
+	.icon-wrapper {
+		width: 23%;
+	}
+
+    .content-wrapper {
+        height: 16vh;
+    }
+
+    @media (max-width: 1199px) {
+        .card {
+            width: 20rem;
+            height: 20rem;
+        }
+
+		h1 {
+			font-size: 1.125rem;
+		}
+
+        p {
+            font-size: 0.875rem;
+        }
+    }
+
+	@media (max-width: 379px) {
+		.card {
+			width: 15rem;
+			height: 15rem;
+			padding: 8% 0 8% 0;
+		}	
+
+		h1 {
+			font-size: 1rem;
+		}
+
+		p {
+			font-size: 0.7rem;	
+		}
+
+	}
+
+</style>
