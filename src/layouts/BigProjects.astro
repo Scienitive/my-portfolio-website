@@ -1,0 +1,162 @@
+---
+import { getCollection } from 'astro:content'
+import GithubIconBorder from '../vectors/icons/GithubIconBorder.astro';
+
+const allProjects = await getCollection('project');
+const projects = allProjects.slice(0, 3);
+---
+
+<div class="projects-container">
+	{
+		projects.map((project) => {
+			return (
+				<article>
+					<div class="image-wrapper">
+						<img src="/images/3.png" alt="project photo">
+					</div>
+					<div class="content">
+						<div class="top-section">
+							<div class="title-holder">
+								<h1>{project.data.name}</h1>
+								<div class="seperator"></div>
+							</div>
+							<div class="links">
+								{project.data.livelink && <a href={project.data.livelink} class="livelink">Live Site</a>}
+								{project.data.githublink && <a href={project.data.githublink} class="githublink"><GithubIconBorder width="37" height="36" color="var(--color-1)" borderWidth="1"/></a>}
+							</div>
+						</div>
+						<div class="middle-section">
+							<p>{project.data.description}</p>
+						</div>
+						<div class="bottom-section">
+							{
+								project.data.techs.map((tech) => {
+									return (
+										<div class="tech-block"><p>{tech}</p></div>
+									)
+								})
+							}
+						</div>
+					</div>
+				</article>
+			)
+		})
+	}
+</div>
+
+<style>
+
+	.projects-container {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		gap: 2rem;
+		margin-top: 1.75rem;
+	}
+
+	article {
+		display: flex;
+		width: 62.5rem;
+		height: 17rem;
+		border-radius: 24px;
+		background-color: var(--bg-dark);
+		align-items: center;
+	}
+
+	.image-wrapper {
+		display: flex;
+		justify-content: center;
+		flex: 1;
+		margin: 1rem 2rem 1rem 2rem;
+		width: 20rem;
+		height: 14rem;
+	}
+
+	img {
+		object-fit: cover;
+		border-radius: 1rem;
+		border: 2px solid var(--color-white);
+	}
+
+	.content {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		flex: 2;
+		height: 14rem;
+		margin: 0 2rem 0 2rem;
+	}
+
+	.top-section {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		font-family: 'Roboto';
+		color: var(--color-whitey);
+	}
+
+	h1 {
+		margin: 0;
+		font-size: 1.75rem;
+	}
+
+	.seperator {
+		height: 6px;
+		background-color: var(--color-2);
+		border-radius: 1rem;
+		margin-top: 2px;
+	}
+
+	.links {
+		display: flex;
+		gap: 0.5rem;
+	}
+
+	.livelink {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 6rem;
+		height: 2.25rem;
+		border-radius: 1rem;
+		border: 1px solid var(--color-1);
+		text-decoration: none;
+		color: var(--color-1);
+	}
+
+	.middle-section {
+		height: 8rem;
+		font-family: 'IBM';
+	}
+
+	.middle-section p {
+		margin: 0 3rem 0 0;
+		font-size: 1.125rem;
+		color: var(--color-white);
+	}
+
+	.bottom-section {
+		display: grid;
+		grid-template-columns: repeat(7, 4.375rem);
+		grid-column-gap: 0.25rem;
+		grid-row-gap: 0.25rem;
+		font-family: 'Roboto';
+	}
+
+	.tech-block {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border: 1px solid var(--color-2);
+		border-radius: 1.75rem;
+		color: var(--color-2);
+		height: 1.75rem;
+	}
+
+	.tech-block p {
+		text-align: center;
+		margin: 0;
+		font-size: 11px;
+	}
+
+</style>

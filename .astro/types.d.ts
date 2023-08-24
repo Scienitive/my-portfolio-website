@@ -211,6 +211,22 @@ declare module 'astro:content' {
   data: InferEntrySchema<"card">
 } & { render(): Render[".md"] };
 };
+"project": {
+"Project1.md": {
+	id: "Project1.md";
+  slug: "project1";
+  body: string;
+  collection: "project";
+  data: InferEntrySchema<"project">
+} & { render(): Render[".md"] };
+"Project2.md": {
+	id: "Project2.md";
+  slug: "project2";
+  body: string;
+  collection: "project";
+  data: InferEntrySchema<"project">
+} & { render(): Render[".md"] };
+};
 
 	};
 
