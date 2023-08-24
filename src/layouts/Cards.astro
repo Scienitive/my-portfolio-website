@@ -1,8 +1,11 @@
 ---
 import Card from "../components/Card.astro";
+import Divider1 from "../vectors/dividers/Divider1.astro";
+import Divider2 from "../vectors/dividers/Divider2.astro";
 ---
 
 <div class="main-container">
+	<Divider1 color="var(--bg-color)"/>
     <div class="card-container">
         <div class="card-wrapper">
             <Card number="1"/>
@@ -14,20 +17,14 @@ import Card from "../components/Card.astro";
             <Card number="3"/>
         </div>
     </div>
+	<Divider2 color="var(--bg-color)"/>
 </div>
 
 <style>
 
     .main-container {
-        position: relative;
-        background-image: url("/vectors/CardBackground.svg");
-        background-size: contain;
-        background-repeat: no-repeat;
-    }
-
-    .background {
-        width: 100%;
-        position: absolute;
+		position: relative;
+		background-color: var(--bg-dark);
     }
 
     .card-container {
@@ -39,12 +36,16 @@ import Card from "../components/Card.astro";
         align-items: center;
     }
 
-    .card-wrapper:nth-child(1) {
-        margin-bottom: 5rem;
+    .card-wrapper:nth-child(3) {
+        margin-top: 2.5rem;
     }
 
-    .card-wrapper:nth-child(3) {
-        margin-top: 5rem;
+    .card-wrapper:nth-child(2) {
+        margin-top: 7.5rem;
+    }
+
+    .card-wrapper:nth-child(1) {
+        margin-bottom: 2.5rem;
     }
 
     @media (max-width: 1199px) {
