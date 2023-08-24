@@ -48,34 +48,45 @@ import Divider2 from "../vectors/dividers/Divider2.astro";
         margin-bottom: 2.5rem;
     }
 
-    @media (max-width: 1199px) {
-        .main-container {
-            background-image: none;
-            background-color: var(--bg-dark);
-            margin: 2rem 0;
-
-        }
-
-        .card-container {
-            margin: 0;
-            height: auto;
-            flex-direction: column;
-            justify-content: center;
-            padding: 2rem 0;
-            gap: 2rem;
-        }
-
+    @media (max-width: 1329px) {
         .card-wrapper:nth-child(1) {
-            margin-bottom: 0;
+            margin-bottom: 2rem;
+        }
+
+        .card-wrapper:nth-child(2) {
+            margin-top: 6rem;
         }
 
         .card-wrapper:nth-child(3) {
-            margin-top: 0;
+            margin-top: 2rem;
         }
     }
 
-    @media (max-width: 549;) {
-        
+    @media (max-width: 1173px) {
+        .card-wrapper:nth-child(1) {
+            margin: 0;
+        }
+
+        .card-wrapper:nth-child(2) {
+            margin: 0;
+        }
+
+        .card-wrapper:nth-child(3) {
+            margin: 0;
+        }
+
+		.card-container {
+			flex-direction: column;
+			height: auto;
+			padding: 8rem 0 5rem 0;
+			gap: 3rem;
+		}
     }
+
+	@media (max-width: 599px) {
+		.card-container {
+			padding: 8rem 0 8rem 0;
+		}
+	}
 
 </style>

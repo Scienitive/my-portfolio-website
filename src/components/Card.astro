@@ -44,24 +44,25 @@ switch (numberInt) {
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: space-between;
-        width: 22vw;
-        height: 22vw;
+        justify-content: start;
+        width: 20rem;
+        height: 20rem;
         border-radius: 20px;
         background-color: var(--bg-color);
         padding: 10% 0 14% 0;
         color: var(--color-white);
+		gap: 0.3rem;
     }
 
     h1 {
-		margin: 0;
+		margin: 0 0 4px 0;
         font-family: 'Roboto';
-        font-size: 1.182vw;
+        font-size: 1.125rem;
     }
 
     p {
         font-family: 'IBM';
-        font-size: 0.92vw;
+        font-size: 0.875rem;
         text-align: center;
         margin: 0 10% 0 10%;
     }
@@ -70,11 +71,22 @@ switch (numberInt) {
 		width: 23%;
 	}
 
-    .content-wrapper {
-        height: 16vh;
+    @media (max-width: 1329px) {
+        .card {
+            width: 16rem;
+            height: 16rem;
+        }
+
+		h1 {
+			font-size: 0.9rem;
+		}
+
+        p {
+            font-size: 0.7rem;
+        }
     }
 
-    @media (max-width: 1199px) {
+    @media (max-width: 1173px) {
         .card {
             width: 20rem;
             height: 20rem;
@@ -91,13 +103,12 @@ switch (numberInt) {
 
 	@media (max-width: 379px) {
 		.card {
-			width: 15rem;
-			height: 15rem;
-			padding: 8% 0 8% 0;
+			width: 16rem;
+			height: 16rem;
 		}	
 
 		h1 {
-			font-size: 1rem;
+			font-size: 0.9rem;
 		}
 
 		p {
