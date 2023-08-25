@@ -21,8 +21,8 @@ const projects = allProjects.slice(0, 3);
 								<div class="seperator"></div>
 							</div>
 							<div class="links">
-								{project.data.livelink && <a href={project.data.livelink} class="livelink">Live Site</a>}
-								{project.data.githublink && <a href={project.data.githublink} class="githublink"><GithubIconBorder width="37" height="36" color="var(--color-1)" borderWidth="1"/></a>}
+								{project.data.livelink && <a href={project.data.livelink} class="livelink">Live<span>&nbspSite</span></a>}
+								{project.data.githublink && <a href={project.data.githublink} class="githublink"><GithubIconBorder extraClass="bigp" width="37" height="36" color="var(--color-1)" borderWidth="1"/></a>}
 							</div>
 						</div>
 						<div class="middle-section">
@@ -69,7 +69,8 @@ const projects = allProjects.slice(0, 3);
 		flex: 1;
 		margin: 1rem 2rem 1rem 2rem;
 		width: 20rem;
-		height: 14rem;
+		height: 100%;
+		padding: 1.5rem 0 1.5rem 0;
 	}
 
 	img {
@@ -83,12 +84,14 @@ const projects = allProjects.slice(0, 3);
 		flex-direction: column;
 		justify-content: space-between;
 		flex: 2;
-		height: 14rem;
+		height: 100%;
 		margin: 0 2rem 0 2rem;
+		padding: 1.5rem 0 1.5rem 0;
 	}
 
 	.top-section {
 		display: flex;
+		flex: 0;
 		justify-content: space-between;
 		align-items: center;
 		font-family: 'Roboto';
@@ -125,8 +128,10 @@ const projects = allProjects.slice(0, 3);
 	}
 
 	.middle-section {
+		flex: 1;
 		height: 8rem;
 		font-family: 'IBM';
+		margin: 0.75rem 0 0.75rem 0;
 	}
 
 	.middle-section p {
@@ -137,7 +142,8 @@ const projects = allProjects.slice(0, 3);
 
 	.bottom-section {
 		display: grid;
-		grid-template-columns: repeat(7, 4.375rem);
+		flex: 0;
+		grid-template-columns: repeat(auto-fill, 4.375rem);
 		grid-column-gap: 0.25rem;
 		grid-row-gap: 0.25rem;
 		font-family: 'Roboto';
@@ -157,6 +163,92 @@ const projects = allProjects.slice(0, 3);
 		text-align: center;
 		margin: 0;
 		font-size: 11px;
+	}
+
+	@media (max-width: 1173px) {
+		article {
+			width: 56rem;
+		}
+	}
+
+	@media (max-width: 999px) {
+		.image-wrapper {
+			display: none;
+		}
+
+		article {
+			width: 38.5rem;
+		}
+	}
+
+	@media (max-width: 699px) {
+		article {
+			width: 26rem;
+			height: 22rem;
+		}
+
+		.livelink span {
+			display: none;
+		}
+
+		.livelink {
+			width: 3.5rem;
+		}
+
+		.top-section {
+			flex-direction: column;
+			gap: 0.75rem;
+		}
+
+		.middle-section p {
+			margin: 0;
+			text-align: center;
+		}
+
+		.bottom-section {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+
+		.tech-block {
+			width: 4.375rem;
+		}
+
+		h1 {
+			text-align: center;
+		}
+	}
+
+	@media (max-width: 499px) {
+		article {
+			width: 16rem;
+		}
+
+		h1 {
+			font-size: 1.5rem;
+		}
+
+		.divider {
+			height: 4px;
+		}
+
+		.middle-section p {
+			font-size: 0.875rem;
+		}
+
+		.tech-block {
+			width: 3.28125rem;
+			height: 1.3125rem;
+		}
+
+		.tech-block p {
+			font-size: 8px;
+		}
+
+		.livelink {
+			height: 1.75rem;
+		}
 	}
 
 </style>
