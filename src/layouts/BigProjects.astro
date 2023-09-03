@@ -42,6 +42,7 @@ const projects = allProjects.slice(0, 3);
 			)
 		})
 	}
+	<a href="/projects" class="projects-link">View All Projects</a>
 </div>
 
 <style>
@@ -165,6 +166,21 @@ const projects = allProjects.slice(0, 3);
 		font-size: 11px;
 	}
 
+	.projects-link {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		border: 2px solid var(--color-1);
+		border-radius: 92px;
+		font-family: 'IBM';
+		font-size: 1.5rem;
+		text-decoration: none;
+		color: var(--color-1);
+		width: 15.5rem;
+		height: 3.75rem;
+		text-align: center;
+	}
+
 	@media (max-width: 1173px) {
 		article {
 			width: 56rem;
@@ -248,6 +264,12 @@ const projects = allProjects.slice(0, 3);
 
 		.livelink {
 			height: 1.75rem;
+		}
+
+		.projects-link {
+			width: 10rem;
+			height: 2.42rem;
+			font-size: 1rem;
 		}
 	}
 
