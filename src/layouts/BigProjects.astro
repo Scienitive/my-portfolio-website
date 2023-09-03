@@ -52,7 +52,7 @@ const projects = allProjects.slice(0, 3);
 		align-items: center;
 		flex-direction: column;
 		gap: 2rem;
-		margin-top: 1.75rem;
+		margin: 2.5rem 0 1.75rem 0;
 	}
 
 	article {
@@ -179,6 +179,12 @@ const projects = allProjects.slice(0, 3);
 		width: 15.5rem;
 		height: 3.75rem;
 		text-align: center;
+	}
+
+	@media (min-width: 1800px) {
+		article {
+			width: 72rem;
+		}
 	}
 
 	@media (max-width: 1173px) {

@@ -10,28 +10,28 @@ import Terminal from "../vectors/Terminal.astro";
 ---
 
 <div class="hero-container">
-    <div class="hero-left">
-        <div class="hero-text">
-            <p>Hi, my name is</p>
-            <p>Altuğ Alpcan Yaşar</p>
-            <p>A passionate developer</p>
-        </div>
-        <div class="hero-links">
-            <a href="#"><GithubIcon width="auto" height="30.82" color="var(--color-1)"/></a>
-            <a href="#"><LinkedinIcon width="29.25" height="29.53" color="var(--color-1)"/></a>
-            <a href="#"><ResumeIcon width="41.625" height="54" color="var(--color-1)"/></a>
-            <a href="#"><ItchIcon width="33.92" height="30.52" color="var(--color-1)"/></a>
-            <a href="#"><YoutubeIcon width="36.27" height="25.31" color="var(--color-1)"/></a>
-        </div>
-    </div>
-    <div class="hero-right">
-        <div class="shape-wrapper">
-            <Shape width="100%" height="auto" color="var(--color-2)"/>
-            <div class="terminal-wrapper">
-                <Terminal width="86%" height="auto"/>
-            </div>
-        </div>
-    </div>
+	<div class="hero-left">
+		<div class="hero-text">
+			<p>Hi, my name is</p>
+			<p>Altuğ Alpcan Yaşar</p>
+			<p>A passionate developer</p>
+		</div>
+		<div class="hero-links">
+			<a href="#"><GithubIcon width="auto" height="30.82" color="var(--color-1)"/></a>
+			<a href="#"><LinkedinIcon width="29.25" height="29.53" color="var(--color-1)"/></a>
+			<a href="#"><ResumeIcon width="41.625" height="54" color="var(--color-1)"/></a>
+			<a href="#"><ItchIcon width="33.92" height="30.52" color="var(--color-1)"/></a>
+			<a href="#"><YoutubeIcon width="36.27" height="25.31" color="var(--color-1)"/></a>
+		</div>
+	</div>
+	<div class="hero-right">
+		<div class="shape-wrapper">
+			<Shape width="100%" height="auto" color="var(--color-2)"/>
+			<div class="terminal-wrapper">
+				<Terminal width="86%" height="auto"/>
+			</div>
+		</div>
+	</div>
 </div>
 
 <style>
@@ -40,10 +40,11 @@ import Terminal from "../vectors/Terminal.astro";
     h2 {
         margin: 0;
     }
-    
+
     .hero-container {
         display: flex;
         padding: 5rem 12vw 2rem 12vw;
+		margin: auto;
     }
 
     .hero-left {
@@ -111,6 +112,23 @@ import Terminal from "../vectors/Terminal.astro";
         top: 20%;
         left: 5%;
     }
+
+	@media (min-width: 1700px) {
+		.hero-left {
+			font-size: 2.5rem;
+		}
+
+        .hero-text p:nth-child(2) {
+            font-size: 4.575rem;
+        }
+	}
+
+	@media (min-width: 1920px) {
+		.hero-container {
+			max-width: 1920px;
+        	padding: 5rem 230.4px 2rem 230.4px;
+		}
+	}
 
     @media (max-width: 1199px) {
         .hero-left {
