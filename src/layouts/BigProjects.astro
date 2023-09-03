@@ -126,6 +126,13 @@ const projects = allProjects.slice(0, 3);
 		border: 1px solid var(--color-1);
 		text-decoration: none;
 		color: var(--color-1);
+		transition: border 0.1s ease-out, color 0.1s ease-out, background-color 0.1s ease-out;
+	}
+
+	.livelink:hover {
+		border: 0px;
+		color: var(--bg-dark-def);
+		background-color: var(--color-1);
 	}
 
 	.middle-section {
@@ -179,6 +186,13 @@ const projects = allProjects.slice(0, 3);
 		width: 15.5rem;
 		height: 3.75rem;
 		text-align: center;
+		transition: border 0.1s ease-out, color 0.1s ease-out, background-color 0.1s ease-out;
+	}
+
+	.projects-link:hover {
+		border: 0px;
+		color: var(--bg-color);
+		background-color: var(--color-1);
 	}
 
 	@media (min-width: 1800px) {
