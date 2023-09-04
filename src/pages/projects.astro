@@ -1,19 +1,15 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
-import Hero from '../layouts/Hero.astro';
 import Header from '../components/Header.astro';
-import Cards from '../layouts/Cards.astro';
-import BigProjects from '../layouts/BigProjects.astro';
 import Footer from '../layouts/Footer.astro'
+import ProjectList from '../layouts/ProjectList.astro';
 import '../../styles/global.css'
 ---
 
 <MainLayout>
 	<Header />
 	<main>
-		<Hero />
-		<Cards />
-		<BigProjects />
+		<ProjectList />
 	</main>
 	<Footer />
 </MainLayout>

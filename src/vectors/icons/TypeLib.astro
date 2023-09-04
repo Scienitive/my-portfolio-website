@@ -1,0 +1,29 @@
+---
+const {width, height, color} = Astro.props;
+---
+
+<svg xmlns="http://www.w3.org/2000/svg" width={width} height={height} viewBox="0 0 54 54" fill={color}>
+	<g filter="url(#filter0_i_324_45)">
+		<path fill-rule="evenodd" clip-rule="evenodd" d="M27 54C41.9117 54 54 41.9117 54 27C54 12.0883 41.9117 0 27 0C12.0883 0 0 12.0883 0 27C0 41.9117 12.0883 54 27 54ZM14 17.625C14 14.5195 16.4955 12 19.5714 12H36.2857H38.1429C39.1701 12 40 12.8379 40 13.875V32.625C40 33.6621 39.1701 34.5 38.1429 34.5V38.25C39.1701 38.25 40 39.0879 40 40.125C40 41.1621 39.1701 42 38.1429 42H36.2857H19.5714C16.4955 42 14 39.4805 14 36.375V17.625ZM17.7143 36.375C17.7143 37.4121 18.5442 38.25 19.5714 38.25H34.4286V34.5H19.5714C18.5442 34.5 17.7143 35.3379 17.7143 36.375ZM22.3571 19.5C21.8464 19.5 21.4286 19.9219 21.4286 20.4375C21.4286 20.9531 21.8464 21.375 22.3571 21.375H33.5C34.0107 21.375 34.4286 20.9531 34.4286 20.4375C34.4286 19.9219 34.0107 19.5 33.5 19.5H22.3571ZM33.5 23.25H22.3571C21.8464 23.25 21.4286 23.6719 21.4286 24.1875C21.4286 24.7031 21.8464 25.125 22.3571 25.125H33.5C34.0107 25.125 34.4286 24.7031 34.4286 24.1875C34.4286 23.6719 34.0107 23.25 33.5 23.25Z"/>
+	</g>
+	<defs>
+		<filter id="filter0_i_324_45" x="0" y="0" width={width} height={height} filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+			<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+			<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+			<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+			<feOffset dy="4"/>
+			<feGaussianBlur stdDeviation="2"/>
+			<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+			<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+			<feBlend mode="normal" in2="shape" result="effect1_innerShadow_324_45"/>
+		</filter>
+	</defs>
+</svg>
+
+<style>
+
+    svg {
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.3));
+    }
+
+</style>

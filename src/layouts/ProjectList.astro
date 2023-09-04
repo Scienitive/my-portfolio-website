@@ -1,0 +1,337 @@
+---
+import { getCollection } from 'astro:content'
+import TypeWeb from '../vectors/icons/TypeWeb.astro';
+import TypeCli from '../vectors/icons/TypeCli.astro';
+import TypeGui from '../vectors/icons/TypeGui.astro';
+import TypeLib from '../vectors/icons/TypeLib.astro';
+import TypeOther from '../vectors/icons/TypeOther.astro';
+import GithubIconBorder from '../vectors/icons/GithubIconBorder.astro';
+
+const projects = await getCollection('project');
+
+const iconWidth = '4.375rem';
+const projectNameWidth = '15rem';
+const descriptionWidth = '15rem';
+const technologiesWidth = '14rem';
+const linksWidth = '7.75rem';
+---
+
+
+<div class="projects-container">
+	<div class="projects-header">
+		<div class="header-all header-type">
+			<p>Type:</p>
+		</div>
+		<div class="header-all header-project">
+			<p>Project Name:</p>
+		</div>
+		<div class="header-all header-description">
+			<p>Description:</p>
+		</div>
+		<div class="header-all header-technologies">
+			<p>Technologies:</p>
+		</div>
+		<div class="header-all header-links">
+			<p>Links:</p>
+		</div>
+	</div>
+	{
+		projects.map((project) => {
+			return (
+				<article>
+					<div class="icon-container">
+							<div class="icon-wrapper">
+								{project.data.type === "web" && <TypeWeb width="100%" height="auto" color="var(--color-1)"/>}
+								{project.data.type === "cli" && <TypeCli width="100%" height="auto" color="var(--color-1)"/>}
+								{project.data.type === "gui" && <TypeGui width="100%" height="auto" color="var(--color-1)"/>}
+								{project.data.type === "lib" && <TypeLib width="100%" height="auto" color="var(--color-1)"/>}
+								{project.data.type === "other" && <TypeOther width="100%" height="auto" color="var(--color-1)"/>}
+							</div>
+					</div>
+					<div class="title-container">
+						<h1>{project.data.name}</h1>
+					</div>
+					<div class="description-container">
+						<p>{project.data.description}</p>
+					</div>
+					<div class="technologies-container">
+						<div class="technologies">
+							{
+								project.data.techs.map((tech) => {
+									return (
+										<div class="tech-block"><p>{tech}</p></div>
+									)
+								})
+							}
+						</div>
+					</div>
+					<div class="link-container">
+						{project.data.livelink && <a href={project.data.livelink} class="livelink">Live</a>}
+						{project.data.githublink && <a href={project.data.githublink} class="githublink"><GithubIconBorder extraClass="smp" width="37" height="36" color="var(--color-1)" borderWidth="1"/></a>}
+					</div>
+				</article>
+			)
+		})
+	}
+</div>
+
+<style define:vars={{ iconWidth, projectNameWidth, descriptionWidth, technologiesWidth, linksWidth}}>
+
+	.projects-container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 0.5rem;
+		margin: 2rem 0 2rem 0;
+	}
+
+	.projects-header {
+		display: flex;
+		justify-content: space-between;
+		width: 62.5rem;
+		height: 1.5rem;
+		background-color: var(--bg-dark);
+		border-radius: 32px;
+		font-family: 'Roboto';
+		font-size: 12px;
+	}
+
+	.header-all {
+		display: flex;
+		align-items: center;
+	}
+
+	.header-type {
+		margin-left: 1rem;
+		width: var(--iconWidth);
+	}
+
+	.header-project {
+		width: var(--projectNameWidth);
+	}
+
+	.header-description {
+		width: var(--descriptionWidth);
+	}
+
+	.header-technologies {
+		width: var(--technologiesWidth);
+	}
+
+	.header-links {
+		width: var(--linksWidth);
+	}
+
+	.projects-header p {
+		margin: 0;
+	}
+
+	article {
+		display: flex;
+		justify-content: space-between;
+		background-color: var(--bg-dark);
+		width: 62.5rem;
+		min-height: 5rem;
+		height: auto;
+		border-radius: 32px;
+	}
+
+	.icon-container {
+		display: flex;
+		align-items: center;
+		width: var(--iconWidth);
+	}
+
+	.icon-wrapper {
+		display: flex;
+		align-items: center;
+		width: auto;
+		height: 80%;
+		margin-left: 1rem;
+	}
+
+	.title-container {
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		width: var(--projectNameWidth);
+		font-family: 'RobotoBold';
+		font-size: 1rem;
+	}
+
+	h1 {
+		margin: 0;
+	}
+
+	.description-container {
+		display: flex;
+		align-items: center;
+		width: var(--descriptionWidth);
+		overflow: hidden;
+		font-family: 'Roboto';
+		font-size: 1rem;
+		padding: 12px 0 12px 0;
+	}
+
+	.description-container p {
+		margin: 0;
+	}
+
+	.technologies-container {
+		display: flex;
+		align-items: center;
+		overflow: hidden;
+	}
+
+	.technologies {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: flex-start;
+		align-content: flex-start;
+		row-gap: 8px;
+		overflow: hidden;
+		width: var(--technologiesWidth);
+		padding: 8px 0 8px 0;
+	}
+
+	.tech-block {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border: 1px solid var(--color-2);
+		border-radius: 28px;
+		width: 4.375rem;
+		height: 1.75rem;
+		color: var(--color-2);
+		font-family: 'Roboto';
+		font-size: 11px;
+	}
+
+	.tech-block p {
+		margin: 0;
+	}
+
+	.link-container {
+		display: flex;
+		justify-content: end;
+		align-items: center;
+		gap: 0.55rem;
+		width: var(--linksWidth);
+		margin-right: 1rem;
+		font-family: 'Roboto';
+		font-size: 1.125rem;
+	}
+
+	.livelink {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 4rem;
+		height: 2.25rem;
+		border-radius: 1rem;
+		border: 1px solid var(--color-1);
+		text-decoration: none;
+		color: var(--color-1);
+		transition: border 0.1s ease-out, color 0.1s ease-out, background-color 0.1s ease-out;
+	}
+
+	.livelink:hover {
+		border: 0px;
+		color: var(--bg-dark-def);
+		background-color: var(--color-1);
+	}
+
+	@media (max-width: 1149px) {
+		article {
+			width: 48rem;
+		}
+
+		.projects-header {
+			width: 48rem;
+		}
+
+		.header-description {
+			display: none;
+		}
+
+		.description-container {
+			display: none;
+		}
+	}
+
+	@media (max-width: 899px) {
+		article {
+			width: 44rem;
+		}
+
+		.projects-header {
+			width: 44rem;
+		}
+
+		.header-project {
+			width: 12rem;
+		}
+
+		.title-container {
+			width: 12rem;
+		}
+	}
+
+	@media (max-width: 799px) {
+		article {
+			width: 28rem;
+		}
+
+		.projects-header {
+			width: 28rem;
+		}
+
+		.header-technologies {
+			display: none;
+		}
+
+		.technologies-container {
+			display: none;
+		}
+	}
+
+	@media (max-width: 499px) {
+		article {
+			width: 17rem;
+			min-height: 3rem;
+		}
+
+		.projects-header {
+			width: 17rem;
+		}
+
+		.header-type {
+			display: none;
+		}
+
+		.icon-container {
+			display: none;
+		}
+
+		.header-project {
+			margin-left: 1rem;
+		}
+
+		.title-container {
+			margin-left: 1rem;
+			font-size: 0.6rem;
+		}
+
+		.link-container {
+			gap: 0.3rem;
+			font-size: 0.875rem;
+		}
+
+		.livelink {
+			width: 3.1rem;
+			height: 1.75rem;
+		}
+	}
+
+</style>
