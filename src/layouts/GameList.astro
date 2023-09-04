@@ -1,0 +1,157 @@
+---
+import { getCollection } from 'astro:content'
+import SteamIconBorder from '../vectors/icons/SteamIconBorder.astro'
+import ItchIconBorder from '../vectors/icons/ItchIconBorder.astro'
+
+const games = await getCollection('game');
+---
+
+<div class="games-container">
+	{
+		games.map((game) => {
+			return (
+				<article>
+					<div class="top-section">
+						<div class="title-wrapper" style={`font-family: ${game.data.fontfamily}; font-size: ${game.data.fontsize};`}>
+							<h1>{game.data.name}</h1>
+						</div>
+						<div class="links-container">
+							{game.data.steamlink && <a href={game.data.steamlink} class="steamlink"><SteamIconBorder width="48" height="48" color="var(--color-1)" borderWidth="2"/></a>}
+							{game.data.itchlink && <a href={game.data.itchlink} class="itchlink"><ItchIconBorder width="53" height="48" color="var(--color-1)" borderWidth="2"/></a>}
+						</div>
+					</div>
+					<div class="bottom-section">
+						<div class="left-section">
+							<div class="video-wrapper">
+								<iframe src={game.data.videolink} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+							</div>
+						</div>
+						<div class="right-section">
+							<div class="description-wrapper">
+								<p>{game.data.description}</p>
+							</div>
+							<div class="info-container">
+								<div class="info">
+									<p class="p-title">Genre:</p>
+									<p>{game.data.genre}</p>
+								</div>
+								<div class="info">
+									<p class="p-title">Price:</p>
+									<p>{game.data.price}</p>
+								</div>
+								<div class="info">
+									<p class="p-title">Platforms:</p>
+									<p>{game.data.platforms}</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</article>
+			)
+		})
+	}
+</div>
+
+<style>
+
+	.games-container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin: 1rem 0 1rem 0;
+		gap: 1rem;
+	}
+
+	article {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		width: 62.5rem;
+		height: 22rem;
+		padding: 2rem 4rem 2rem 4rem;
+		background-color: var(--bg-dark);
+		border-radius: 4.5rem;
+	}
+
+	.top-section {
+		display: flex;
+		justify-content: space-between;
+		gap: 2rem;
+		margin-bottom: 0.75rem;
+	}
+
+	.title-wrapper {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex: 1;
+		color: var(--color-1);
+		text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+	}
+
+	h1 {
+		margin: 0;
+	}
+
+	.links-container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 1rem;
+		flex: 1;
+	}
+
+	.bottom-section {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 2rem;
+	}
+
+	.left-section {
+		display: flex;
+		justify-content: center;
+		flex: 1;
+	}
+
+	.right-section {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		gap: 8px;
+		flex: 1;
+		height: 225px;
+	}
+
+	.description-wrapper {
+		font-family: 'Roboto';
+		font-size: 16px;
+	}
+
+	.info-container {
+		display: flex;
+		flex-direction: column;
+		justify-content: end;
+		gap: 4px;
+		font-family: 'Roboto';
+		font-size: 16px;
+	}
+
+	.p-title {
+		width: 100px;
+	}
+
+	p {
+		margin: 0;
+	}
+
+	iframe {
+		width: 400px;
+		height: 225px;
+	}
+
+	.info {
+		display: flex;
+	}
+
+</style>

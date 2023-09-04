@@ -39,6 +39,16 @@
     src: url('/fonts/IBMPlexSans-Regular.ttf') format('truetype');
 }
 
+@font-face {
+	font-family: 'Bungee';
+	src: url('/fonts/Bungee-Regular.ttf') format('truetype')
+}
+
+@font-face {
+	font-family: 'Azonix';
+	src: url('/fonts/Azonix.otf') format('opentype')
+}
+
 html {
     color-scheme: dark;
 }

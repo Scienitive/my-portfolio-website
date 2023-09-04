@@ -18,5 +18,20 @@ export const collections = {
 			livelink: z.string().url().optional(),
 			photolinks: z.array(z.string()).optional()
 		})
+	}),
+
+	game: defineCollection({
+		schema: z.object({
+			name: z.string(),
+			description: z.string(),
+			fontfamily: z.string(),
+			fontsize: z.string(),
+			genre: z.string(),
+			price: z.string(),
+			platforms: z.string(),
+			videolink: z.string().url(),
+			itchlink: z.string().url().optional(),
+			steamlink: z.string().url().optional()
+		})
 	})
 };
