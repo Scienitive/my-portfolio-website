@@ -226,6 +226,27 @@ declare module 'astro:content' {
   collection: "game";
   data: InferEntrySchema<"game">
 } & { render(): Render[".md"] };
+"Game3.md": {
+	id: "Game3.md";
+  slug: "game3";
+  body: string;
+  collection: "game";
+  data: InferEntrySchema<"game">
+} & { render(): Render[".md"] };
+"Game4.md": {
+	id: "Game4.md";
+  slug: "game4";
+  body: string;
+  collection: "game";
+  data: InferEntrySchema<"game">
+} & { render(): Render[".md"] };
+"Game5.md": {
+	id: "Game5.md";
+  slug: "game5";
+  body: string;
+  collection: "game";
+  data: InferEntrySchema<"game">
+} & { render(): Render[".md"] };
 };
 "project": {
 "Project1.md": {

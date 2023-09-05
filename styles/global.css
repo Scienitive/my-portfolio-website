@@ -49,6 +49,16 @@
 	src: url('/fonts/Azonix.otf') format('opentype')
 }
 
+@font-face {
+	font-family: 'Play';
+	src: url('/fonts/Play-Bold.ttf') format('truetype')
+}
+
+@font-face {
+	font-family: 'Osaka-Sans';
+	src: url('/fonts/osaka-re.ttf') format('truetype')
+}
+
 html {
     color-scheme: dark;
 }
