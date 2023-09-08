@@ -29,6 +29,7 @@ import Terminal from "../vectors/Terminal.astro";
 			<Shape width="100%" height="auto" color="var(--color-2)"/>
 			<div class="terminal-wrapper">
 				<Terminal width="86%" height="auto"/>
+				<p>alyasar$</p>
 			</div>
 		</div>
 	</div>
@@ -112,6 +113,23 @@ import Terminal from "../vectors/Terminal.astro";
         top: 20%;
         left: 5%;
     }
+
+	.terminal-wrapper p {
+		position: absolute;
+		top: 10%;
+		left: 2.75%;
+		font-size: 1.75vw;
+		animation: cursor 0.8s step-end infinite alternate;
+		border-right: 1.5vw solid;
+		padding-right: 0.75vw;
+		border-color: transparent;
+		font-family: 'Roboto';
+		color: var(--color-whitey);
+	}
+
+	@keyframes cursor {
+		50% { border-color: var(--color-whitey); }
+	}
 
 	@media (min-width: 1700px) {
 		.hero-left {
