@@ -4,10 +4,12 @@ import TypeWeb from '../vectors/icons/TypeWeb.astro';
 import TypeCli from '../vectors/icons/TypeCli.astro';
 import TypeGui from '../vectors/icons/TypeGui.astro';
 import TypeLib from '../vectors/icons/TypeLib.astro';
+import TypeServer from '../vectors/icons/TypeServer.astro';
 import TypeOther from '../vectors/icons/TypeOther.astro';
 import GithubIconBorder from '../vectors/icons/GithubIconBorder.astro';
 
 const projects = await getCollection('project');
+projects.sort((a, b) => a.data.order - b.data.order);
 
 const iconWidth = '3.375rem';
 const projectNameWidth = '15rem';
@@ -45,6 +47,7 @@ const linksWidth = '7.75rem';
 								{project.data.type === "cli" && <TypeCli width="100%" height="auto" color="var(--color-1)"/>}
 								{project.data.type === "gui" && <TypeGui width="100%" height="auto" color="var(--color-1)"/>}
 								{project.data.type === "lib" && <TypeLib width="100%" height="auto" color="var(--color-1)"/>}
+								{project.data.type === "server" && <TypeServer width="100%" height="auto" color="var(--color-1)"/>}
 								{project.data.type === "other" && <TypeOther width="100%" height="auto" color="var(--color-1)"/>}
 							</div>
 					</div>

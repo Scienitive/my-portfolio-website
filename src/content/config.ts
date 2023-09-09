@@ -12,11 +12,12 @@ export const collections = {
 		schema: z.object({
 			type: z.string(),
 			name: z.string(),
+			order: z.number(),
 			description: z.string(),
 			techs: z.array(z.string()),
 			githublink: z.string().url().optional(),
 			livelink: z.string().url().optional(),
-			photolinks: z.array(z.string()).optional()
+			photo: z.boolean().optional()
 		})
 	}),
 
@@ -24,6 +25,7 @@ export const collections = {
 		schema: z.object({
 			name: z.string(),
 			description: z.string(),
+			order: z.number(),
 			fontfamily: z.string(),
 			fontsize: z.string(),
 			genre: z.string(),

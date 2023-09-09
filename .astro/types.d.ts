@@ -212,60 +212,137 @@ declare module 'astro:content' {
 } & { render(): Render[".md"] };
 };
 "game": {
-"Game1.md": {
-	id: "Game1.md";
-  slug: "game1";
+"Gaserb.md": {
+	id: "Gaserb.md";
+  slug: "gaserb";
   body: string;
   collection: "game";
   data: InferEntrySchema<"game">
 } & { render(): Render[".md"] };
-"Game2.md": {
-	id: "Game2.md";
-  slug: "game2";
+"dice_arena.md": {
+	id: "dice_arena.md";
+  slug: "dice_arena";
   body: string;
   collection: "game";
   data: InferEntrySchema<"game">
 } & { render(): Render[".md"] };
-"Game3.md": {
-	id: "Game3.md";
-  slug: "game3";
+"dualthrough.md": {
+	id: "dualthrough.md";
+  slug: "dualthrough";
   body: string;
   collection: "game";
   data: InferEntrySchema<"game">
 } & { render(): Render[".md"] };
-"Game4.md": {
-	id: "Game4.md";
-  slug: "game4";
+"gaserb.md": {
+	id: "gaserb.md";
+  slug: "gaserb";
   body: string;
   collection: "game";
   data: InferEntrySchema<"game">
 } & { render(): Render[".md"] };
-"Game5.md": {
-	id: "Game5.md";
-  slug: "game5";
+"llyulang.md": {
+	id: "llyulang.md";
+  slug: "llyulang";
+  body: string;
+  collection: "game";
+  data: InferEntrySchema<"game">
+} & { render(): Render[".md"] };
+"thechaosincrypto.md": {
+	id: "thechaosincrypto.md";
+  slug: "thechaosincrypto";
   body: string;
   collection: "game";
   data: InferEntrySchema<"game">
 } & { render(): Render[".md"] };
 };
 "project": {
-"Project1.md": {
-	id: "Project1.md";
-  slug: "project1";
+"CPP_Modules.md": {
+	id: "CPP_Modules.md";
+  slug: "cpp_modules";
   body: string;
   collection: "project";
   data: InferEntrySchema<"project">
 } & { render(): Render[".md"] };
-"Project2.md": {
-	id: "Project2.md";
-  slug: "project2";
+"camagru.md": {
+	id: "camagru.md";
+  slug: "camagru";
   body: string;
   collection: "project";
   data: InferEntrySchema<"project">
 } & { render(): Render[".md"] };
-"Project3.md": {
-	id: "Project3.md";
-  slug: "project3";
+"cub3D.md": {
+	id: "cub3D.md";
+  slug: "cub3d";
+  body: string;
+  collection: "project";
+  data: InferEntrySchema<"project">
+} & { render(): Render[".md"] };
+"ft_containers.md": {
+	id: "ft_containers.md";
+  slug: "ft_containers";
+  body: string;
+  collection: "project";
+  data: InferEntrySchema<"project">
+} & { render(): Render[".md"] };
+"ft_irc.md": {
+	id: "ft_irc.md";
+  slug: "ft_irc";
+  body: string;
+  collection: "project";
+  data: InferEntrySchema<"project">
+} & { render(): Render[".md"] };
+"ft_printf.md": {
+	id: "ft_printf.md";
+  slug: "ft_printf";
+  body: string;
+  collection: "project";
+  data: InferEntrySchema<"project">
+} & { render(): Render[".md"] };
+"ft_transcendence.md": {
+	id: "ft_transcendence.md";
+  slug: "ft_transcendence";
+  body: string;
+  collection: "project";
+  data: InferEntrySchema<"project">
+} & { render(): Render[".md"] };
+"get_next_line.md": {
+	id: "get_next_line.md";
+  slug: "get_next_line";
+  body: string;
+  collection: "project";
+  data: InferEntrySchema<"project">
+} & { render(): Render[".md"] };
+"libft.md": {
+	id: "libft.md";
+  slug: "libft";
+  body: string;
+  collection: "project";
+  data: InferEntrySchema<"project">
+} & { render(): Render[".md"] };
+"minishell.md": {
+	id: "minishell.md";
+  slug: "minishell";
+  body: string;
+  collection: "project";
+  data: InferEntrySchema<"project">
+} & { render(): Render[".md"] };
+"minitalk.md": {
+	id: "minitalk.md";
+  slug: "minitalk";
+  body: string;
+  collection: "project";
+  data: InferEntrySchema<"project">
+} & { render(): Render[".md"] };
+"philosophers.md": {
+	id: "philosophers.md";
+  slug: "philosophers";
+  body: string;
+  collection: "project";
+  data: InferEntrySchema<"project">
+} & { render(): Render[".md"] };
+"push_swap.md": {
+	id: "push_swap.md";
+  slug: "push_swap";
   body: string;
   collection: "project";
   data: InferEntrySchema<"project">

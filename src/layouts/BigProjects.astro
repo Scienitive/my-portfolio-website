@@ -3,6 +3,7 @@ import { getCollection } from 'astro:content'
 import GithubIconBorder from '../vectors/icons/GithubIconBorder.astro';
 
 const allProjects = await getCollection('project');
+allProjects.sort((a, b) => a.data.order - b.data.order);
 const projects = allProjects.slice(0, 3);
 ---
 
@@ -12,7 +13,7 @@ const projects = allProjects.slice(0, 3);
 			return (
 				<article>
 					<div class="image-wrapper">
-						<img src="/images/3.png" alt="project photo">
+						{project.data.photo && <img src=`/images/${project.data.name}.png` alt="project photo">}
 					</div>
 					<div class="content">
 						<div class="top-section">
@@ -78,6 +79,7 @@ const projects = allProjects.slice(0, 3);
 		object-fit: contain;
 		border-radius: 1rem;
 		border: 2px solid var(--color-white);
+		aspect-ratio: 16/9;
 	}
 
 	.content {

@@ -4,6 +4,7 @@ import SteamIconBorder from '../vectors/icons/SteamIconBorder.astro'
 import ItchIconBorder from '../vectors/icons/ItchIconBorder.astro'
 
 const games = await getCollection('game');
+games.sort((a, b) => a.data.order - b.data.order);
 ---
 
 <div class="games-container">
