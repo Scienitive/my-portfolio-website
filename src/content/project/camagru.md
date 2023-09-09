@@ -11,4 +11,5 @@ techs:
 - "NGINX"
 - "Docker"
 githublink: "https://github.com/Scienitive/42-camagru"
+photo: true
 ---

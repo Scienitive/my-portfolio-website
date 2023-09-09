@@ -69,17 +69,18 @@ const projects = allProjects.slice(0, 3);
 		display: flex;
 		justify-content: center;
 		flex: 1;
-		margin: 1rem 2rem 1rem 2rem;
+		margin: 1rem 1.25rem 1rem 2rem;
 		width: 20rem;
 		height: 100%;
 		padding: 1.5rem 0 1.5rem 0;
+		aspect-ratio: 2/1;
 	}
 
 	img {
 		object-fit: contain;
 		border-radius: 1rem;
 		border: 2px solid var(--color-white);
-		aspect-ratio: 16/9;
+		aspect-ratio: 2/1;
 	}
 
 	.content {
@@ -88,7 +89,7 @@ const projects = allProjects.slice(0, 3);
 		justify-content: space-between;
 		flex: 2;
 		height: 100%;
-		margin: 0 2rem 0 2rem;
+		margin: 0 2rem 0 1.25rem;
 		padding: 1.5rem 0 1.5rem 0;
 	}
 
@@ -197,12 +198,6 @@ const projects = allProjects.slice(0, 3);
 		background-color: var(--color-1);
 	}
 
-	@media (min-width: 1800px) {
-		article {
-			width: 72rem;
-		}
-	}
-
 	@media (max-width: 1173px) {
 		article {
 			width: 56rem;
@@ -216,6 +211,10 @@ const projects = allProjects.slice(0, 3);
 
 		article {
 			width: 38.5rem;
+		}
+
+		.content {
+			margin: 0 2rem 0 2rem;
 		}
 	}
 

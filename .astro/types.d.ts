@@ -212,13 +212,6 @@ declare module 'astro:content' {
 } & { render(): Render[".md"] };
 };
 "game": {
-"Gaserb.md": {
-	id: "Gaserb.md";
-  slug: "gaserb";
-  body: string;
-  collection: "game";
-  data: InferEntrySchema<"game">
-} & { render(): Render[".md"] };
 "dice_arena.md": {
 	id: "dice_arena.md";
   slug: "dice_arena";
@@ -329,6 +322,13 @@ declare module 'astro:content' {
 "minitalk.md": {
 	id: "minitalk.md";
   slug: "minitalk";
+  body: string;
+  collection: "project";
+  data: InferEntrySchema<"project">
+} & { render(): Render[".md"] };
+"my-portfolio-website.md": {
+	id: "my-portfolio-website.md";
+  slug: "my-portfolio-website";
   body: string;
   collection: "project";
   data: InferEntrySchema<"project">
