@@ -10,18 +10,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Deploy to Server
-        uses: appleboy/ssh-action@master
-        with:
-          host: ${{ secrets.HOST }}
-          username: ${{ secrets.USERNAME }}
-          password: ${{ secrets.PASSWORD }}
-          port: 22
-          script: |
-            cd /home/my-portfolio-website
-            git pull
-            npm run build
-            rm -rf /var/www/alyasar.dev/*
-            mv dist/* /var/www/alyasar.dev/
-            rm -rf dist
+      - name: Checkout
+        uses: actions/checkout@v2
 
+      - name: Dependencies
+        run: |
+          sudo apt-install npm -y
+          npm i
+
+      - name: Build
+        run: npm run build
