@@ -19,7 +19,9 @@ jobs:
           npm i
 
       - name: Build
-        run: npm run build
+        run: |
+          npm run build
+          mv dist alyasar.dev
 
       - name: Delete Old
         uses: appleboy/ssh-action@v1.0.0
@@ -28,7 +30,7 @@ jobs:
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
           port: 22
-          script: rm -rf /var/www/alyasar.dev/*
+          script: rm -rf /var/www/alyasar.dev
 
       - name: Deploy
         uses: appleboy/scp-action@v0.1.4
@@ -37,5 +39,5 @@ jobs:
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
           port: 22
-          source: "dist/*"
-          target: /var/www/alyasar.dev/
+          source: "dist"
+          target: /var/www/
