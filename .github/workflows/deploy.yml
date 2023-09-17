@@ -15,7 +15,7 @@ jobs:
 
       - name: Dependencies
         run: |
-          sudo apt-install npm -y
+          sudo apt install npm -y
           npm i
 
       - name: Build
