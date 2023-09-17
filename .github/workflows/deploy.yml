@@ -20,3 +20,22 @@ jobs:
 
       - name: Build
         run: npm run build
+
+      - name: Delete Old
+        uses: appleboy/ssh-action@v1.0.0
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
+          port: 22
+          script: rm -rf /var/www/alyasar.dev/*
+
+      - name: Deploy
+        uses: appleboy/scp-action@v0.1.4
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
+          port: 22
+          source: "dist/*"
+          target: /var/www/alyasar.dev/
