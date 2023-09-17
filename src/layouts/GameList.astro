@@ -7,7 +7,7 @@ const games = await getCollection('game');
 games.sort((a, b) => a.data.order - b.data.order);
 ---
 
-<div class="games-container">
+<section>
 	{
 		games.map((game) => {
 			return (
@@ -51,11 +51,11 @@ games.sort((a, b) => a.data.order - b.data.order);
 			)
 		})
 	}
-</div>
+</section>
 
 <style>
 
-	.games-container {
+	section {
 		display: flex;
 		flex-direction: column;
 		align-items: center;

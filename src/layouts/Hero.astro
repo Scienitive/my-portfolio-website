@@ -9,7 +9,7 @@ import Shape from "../vectors/Shape.astro";
 import Terminal from "../vectors/Terminal.astro";
 ---
 
-<div class="hero-container">
+<section>
 	<div class="hero-left">
 		<div class="hero-text">
 			<p>Hi, my name is</p>
@@ -17,11 +17,11 @@ import Terminal from "../vectors/Terminal.astro";
 			<p>A passionate developer</p>
 		</div>
 		<div class="hero-links">
-			<a href="#"><GithubIcon width="auto" height="30.82" color="var(--color-1)"/></a>
-			<a href="#"><LinkedinIcon width="29.25" height="29.53" color="var(--color-1)"/></a>
-			<a href="#"><ResumeIcon width="41.625" height="54" color="var(--color-1)"/></a>
-			<a href="#"><ItchIcon width="33.92" height="30.52" color="var(--color-1)"/></a>
-			<a href="#"><YoutubeIcon width="36.27" height="25.31" color="var(--color-1)"/></a>
+			<a href="https://github.com/scienitive"><GithubIcon width="auto" height="30.82" color="var(--color-1)"/></a>
+			<a href="https://linkedin.com/in/alyasar"><LinkedinIcon width="29.25" height="29.53" color="var(--color-1)"/></a>
+			<a href="/resume.pdf"><ResumeIcon width="41.625" height="54" color="var(--color-1)"/></a>
+			<a href="https://scienitive.itch.io"><ItchIcon width="33.92" height="30.52" color="var(--color-1)"/></a>
+			<a href="https://youtube.com/@altugga"><YoutubeIcon width="36.27" height="25.31" color="var(--color-1)"/></a>
 		</div>
 	</div>
 	<div class="hero-right">
@@ -33,7 +33,7 @@ import Terminal from "../vectors/Terminal.astro";
 			</div>
 		</div>
 	</div>
-</div>
+</section>
 
 <style>
 
@@ -42,7 +42,7 @@ import Terminal from "../vectors/Terminal.astro";
         margin: 0;
     }
 
-    .hero-container {
+    section {
         display: flex;
         padding: 5rem 12vw 2rem 12vw;
 		margin: auto;
@@ -132,7 +132,7 @@ import Terminal from "../vectors/Terminal.astro";
 	}
 
 	@media (min-width: 1440px) {
-		.hero-container {
+		section {
 			max-width: 1440px;
 			padding: 5rem 172.8px 2rem 172.8px;
 		}

@@ -7,7 +7,7 @@ allProjects.sort((a, b) => a.data.order - b.data.order);
 const projects = allProjects.slice(0, 3);
 ---
 
-<div class="projects-container">
+<section>
 	{
 		projects.map((project) => {
 			return (
@@ -44,11 +44,11 @@ const projects = allProjects.slice(0, 3);
 		})
 	}
 	<a href="/projects" class="projects-link">View All Projects</a>
-</div>
+</section>
 
 <style>
 
-	.projects-container {
+	section {
 		display: flex;
 		align-items: center;
 		flex-direction: column;
