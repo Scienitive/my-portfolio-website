@@ -39,5 +39,5 @@ jobs:
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
           port: 22
-          source: "dist"
+          source: "alyasar.dev"
           target: /var/www/
