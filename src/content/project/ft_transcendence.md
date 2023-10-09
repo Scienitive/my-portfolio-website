@@ -1,7 +1,7 @@
 ---
 type: "web"
 name: "ft_transcendence"
-order: 2
+order: 3
 description: "A web application where you can play pong against other players,  join a chatroom and chat real-time with other people, send friend requests to other players and much more..."
 techs:
 - "NestJS"

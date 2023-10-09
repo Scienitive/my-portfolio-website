@@ -1,7 +1,7 @@
 ---
 type: "cli"
 name: "minishell"
-order: 3
+order: 4
 description: "A mini command interpreter (shell) based on bash."
 techs:
 - "C"

@@ -1,7 +1,7 @@
 ---
 type: "gui"
 name: "cub3D"
-order: 7
+order: 8
 description: "A 3D map renderer using raycasting technology (Wolfenstein 3D like)."
 techs:
 - "C"
