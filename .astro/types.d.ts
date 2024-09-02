@@ -326,6 +326,13 @@ declare module 'astro:content' {
   collection: "project";
   data: InferEntrySchema<"project">
 } & { render(): Render[".md"] };
+"movie-list.md": {
+	id: "movie-list.md";
+  slug: "movie-list";
+  body: string;
+  collection: "project";
+  data: InferEntrySchema<"project">
+} & { render(): Render[".md"] };
 "moviterm.md": {
 	id: "moviterm.md";
   slug: "moviterm";

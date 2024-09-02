@@ -1,9 +1,9 @@
 ---
 type: "lib"
 name: "get_next_line"
-order: 15
+order: 16
 description: "A function for reading a line from a file descriptor in C."
 techs:
-- "C"
+  - "C"
 githublink: "https://github.com/Scienitive/42-gnl"
 ---

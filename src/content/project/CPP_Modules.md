@@ -1,9 +1,9 @@
 ---
 type: "other"
 name: "CPP_Modules"
-order: 9
+order: 10
 description: "Collection of some small projects I did when I was learning about Object-Oriented Programming with C++."
 techs:
-- "C++"
+  - "C++"
 githublink: "https://github.com/Scienitive/42-CPP-Modules"
 ---

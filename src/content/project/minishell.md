@@ -1,10 +1,10 @@
 ---
 type: "cli"
 name: "minishell"
-order: 4
+order: 5
 description: "A mini command interpreter (shell) based on bash."
 techs:
-- "C"
+  - "C"
 githublink: "https://github.com/Scienitive/42-minishell"
 photo: true
 ---

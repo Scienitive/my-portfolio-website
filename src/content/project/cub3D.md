@@ -1,9 +1,9 @@
 ---
 type: "gui"
 name: "cub3D"
-order: 8
+order: 9
 description: "A 3D map renderer using raycasting technology (Wolfenstein 3D like)."
 techs:
-- "C"
+  - "C"
 githublink: "https://github.com/Scienitive/42-cub3D"
 ---

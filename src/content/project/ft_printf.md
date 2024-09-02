@@ -1,9 +1,9 @@
 ---
 type: "lib"
 name: "ft_printf"
-order: 13
+order: 14
 description: "Reimplementation of the printf function in C."
 techs:
-- "C"
+  - "C"
 githublink: "https://github.com/Scienitive/42-ft_printf"
 ---
