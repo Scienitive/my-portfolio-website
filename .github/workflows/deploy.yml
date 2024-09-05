@@ -28,8 +28,8 @@ jobs:
         with:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
-          password: ${{ secrets.PASSWORD }}
-          port: 22
+          key: ${{ secrets.PRIVATE_KEY }}
+          port: ${{ secrets.PORT }}
           script: rm -rf /var/www/alyasar.dev
 
       - name: Deploy
@@ -37,7 +37,7 @@ jobs:
         with:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
-          password: ${{ secrets.PASSWORD }}
-          port: 22
+          key: ${{ secrets.PRIVATE_KEY }}
+          port: ${{ secrets.PORT }}
           source: "alyasar.dev"
           target: /var/www/
