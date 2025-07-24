@@ -10,6 +10,7 @@ techs:
   - "React"
   - "tRPC"
   - "PostgreSQL"
+  - "Redis"
   - "Typescript"
   - "HTML/CSS"
 livelink: "https://sinefile.com"
