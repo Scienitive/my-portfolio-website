@@ -256,6 +256,13 @@ declare module 'astro:content' {
   collection: "project";
   data: InferEntrySchema<"project">
 } & { render(): Render[".md"] };
+"Sinefile.md": {
+	id: "Sinefile.md";
+  slug: "sinefile";
+  body: string;
+  collection: "project";
+  data: InferEntrySchema<"project">
+} & { render(): Render[".md"] };
 "camagru.md": {
 	id: "camagru.md";
   slug: "camagru";

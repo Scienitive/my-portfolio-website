@@ -1,7 +1,7 @@
 ---
 type: "cli"
 name: "push_swap"
-order: 11
+order: 12
 description: "A number sorting program using only 2 stacks and some strict rules."
 techs:
   - "C"

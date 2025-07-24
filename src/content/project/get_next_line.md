@@ -1,7 +1,7 @@
 ---
 type: "lib"
 name: "get_next_line"
-order: 16
+order: 17
 description: "A function for reading a line from a file descriptor in C."
 techs:
   - "C"

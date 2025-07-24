@@ -1,7 +1,7 @@
 ---
 type: "cli"
 name: "philosophers"
-order: 12
+order: 13
 description: "A CLI application about the famous dining philosophers problem using Multi-Threaded Programming in C."
 techs:
   - "C"

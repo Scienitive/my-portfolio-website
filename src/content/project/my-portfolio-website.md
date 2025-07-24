@@ -1,7 +1,7 @@
 ---
 type: "web"
 name: "my-portfolio-website"
-order: 7
+order: 8
 description: "The website that you are currently on."
 techs:
   - "Astro"

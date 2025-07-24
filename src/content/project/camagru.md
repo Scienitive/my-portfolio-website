@@ -1,7 +1,7 @@
 ---
 type: "web"
 name: "Camagru"
-order: 2
+order: 3
 description: "A social platform website where you can post images with stickers on top of them. It's kind of like a mixture of Instagram and Snapchat. (The live site resets every 24h.)"
 techs:
   - "Javascript"

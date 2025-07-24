@@ -1,7 +1,7 @@
 ---
 type: "server"
 name: "ft_irc"
-order: 8
+order: 9
 description: "A minimal IRC server project using C++."
 techs:
   - "C++"

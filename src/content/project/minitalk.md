@@ -1,7 +1,7 @@
 ---
 type: "server"
 name: "minitalk"
-order: 13
+order: 14
 description: "A communication server and client program using only 2 singals."
 techs:
   - "C"
