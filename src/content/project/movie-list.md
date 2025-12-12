@@ -11,6 +11,5 @@ techs:
   - "Typescript"
   - "HTML/CSS"
 githublink: "https://github.com/Scienitive/movie-list"
-livelink: "https://movielist.alyasar.dev"
 photo: true
 ---
